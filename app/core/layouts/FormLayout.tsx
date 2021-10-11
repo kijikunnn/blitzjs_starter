@@ -13,7 +13,7 @@ const FormLayout = ({ title, children }: LayoutProps) => {
         <title>{title || "blitzjs_starter"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen w-3/5 mx-auto bg-blue-100">{children}</div>
+      <div className="min-h-screen w-3/5 mx-auto bg-gray-100">{children}</div>
     </>
   )
 }

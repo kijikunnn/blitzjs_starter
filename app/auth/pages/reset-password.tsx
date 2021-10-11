@@ -10,8 +10,8 @@ const ResetPasswordPage: BlitzPage = () => {
   const [resetPasswordMutation, { isSuccess }] = useMutation(resetPassword)
 
   return (
-    <div>
-      <h1>Set a New Password</h1>
+    <div className="text-center py-8">
+      <h1 className="text-4xl mb-4">Set a New Password</h1>
 
       {isSuccess ? (
         <div>

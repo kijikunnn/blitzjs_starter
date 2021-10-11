@@ -1,3 +1,5 @@
+import "@testing-library/cypress/add-commands"
+
 describe("sign up", () => {
   it("create account", () => {
     // click on sign up button

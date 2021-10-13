@@ -5,5 +5,5 @@
     "types": ["cypress", "@testing-library/cypress"]
   },
   "exclude": ["cypress"],
-  "include": ["../node_modules/cypress/types/*.ts", "./**/*.ts"]
+  "include": ["../node_modules/cypress/types/*.ts", "./*/*.ts"]
 }

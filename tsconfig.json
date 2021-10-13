@@ -17,15 +17,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
-    "types": ["cypress", "@testing-library/cypress"]
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
-  // "exclude": ["node_modules", "**/*.e2e.ts", "cypress"],
-  "include": [
-    "blitz-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "node_modules/cypress/types/*.ts",
-    "cypress/**/*.ts"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["blitz-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

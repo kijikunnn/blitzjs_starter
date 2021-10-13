@@ -10,8 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "cypress": "cypress open",
-    "cypress:headless": "cypress run",
-    "cypress:install": "cypress install",
+    "cypress:run": "cypress run",
     "prepare": "husky install"
   },
   "prisma": {

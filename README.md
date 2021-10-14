@@ -1,48 +1,43 @@
 # blitzjs_starter
 
-1. yarn
-2. blitz prisma migrate dev (when asked, you can name the migration anything)
-3. blitz dev
-
 ## 使用技術
 
 - Next.js
   - React Framework
-- SWR
-  - データ取得
+- React Query
+  - Data Query
 - Tailwind CSS
-  - スタイル
+  - CSS
 - Prisma
   - TypeScript ORM
 - SuperTokens library
-  - 認証
+  - Authentication
 - Jest
-  - 単体・ユニットテスト
+  - Test(Unit)
 - Cypress
-  - E2E テスト
+  - Test(E2E)
 - ESLint
   - Linter
 - Prettier
   - Code Formatter
 - husky
+  - Git Hooks
 
 ## Getting Started
 
-## コマンド一覧
-
 ```blitz
-  blitz [COMMAND]
-
-  dev       Start a development server
-  build     Create a production build
-  start     Start a production server
-  export    Export your Blitz app as a static application
-  prisma    Run prisma commands
-  generate  Generate new files for your Blitz project
-  console   Run the Blitz console REPL
-  install   Install a recipe
-  help      Display help for blitz
-  test      Run project tests
+yarn
+blitz prisma migrate dev
+blitz dev
 ```
 
-You can read more about it on the [CLI Overview](https://blitzjs.com/docs/cli-overview) documentation.
+### pre-push
+
+```husky
+npx tsc
+yarn lint
+yarn test
+yarn cypress:run
+```
+
+- pre-push 時に cypress の E2E テストが実行されるため，予め`blitz dev`でローカルサーバーを起動しておかないと，プッシュエラーが発生する．

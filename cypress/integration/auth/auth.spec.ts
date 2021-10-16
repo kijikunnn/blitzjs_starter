@@ -98,3 +98,41 @@ describe("login to logout", () => {
     cy.findByText(/login/i)
   })
 })
+
+describe("email null", () => {
+  it("create account", () => {
+    // click on login button
+    cy.visit("/")
+    cy.findByRole("link", {
+      name: /sign up/i,
+    }).click()
+
+    // add email and password and redirect to home
+    cy.findByRole("textbox", {
+      name: /email/i,
+    }).type(" ")
+    cy.findByRole("button", {
+      name: /create account/i,
+    }).click()
+
+    cy.findByText(/Invalid email/i)
+  })
+})
+
+describe("email null", () => {
+  it("create account", () => {
+    // click on login button
+    cy.visit("/")
+    cy.findByRole("link", {
+      name: /sign up/i,
+    }).click()
+
+    // add email and password and redirect to home
+    cy.findByLabelText(/password/i).type("hoge")
+    cy.findByRole("button", {
+      name: /create account/i,
+    }).click()
+
+    cy.findByText(/Should be at least 10 characters/i)
+  })
+})
